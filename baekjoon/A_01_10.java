@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * hello_world
  */
-public class Print {
+public class A_01_10 {
 
     // 22/01/09
     public static void hello(String[] args) {
@@ -36,6 +36,8 @@ public class Print {
         int num2 = sc.nextInt();
 
         System.out.println(num1*num2);
+
+        sc.close();
     }
 
     public static void divide(String[] args) {
@@ -44,6 +46,8 @@ public class Print {
         double num2 = sc.nextDouble();
 
         System.out.println(num1/num2);
+
+        sc.close();
     }
 
     public static void calc_4(String[] args) {
@@ -56,6 +60,8 @@ public class Print {
         System.out.println(num1*num2);
         System.out.println(num1/num2);
         System.out.println(num1%num2);
+
+        sc.close();
     }
 
     public static void main(String[] args) {
@@ -68,5 +74,7 @@ public class Print {
         System.out.println(((num1%num3)+(num2%num3))%num3);
         System.out.println((num1*num2)%num3);
         System.out.println( ((num1%num3)*(num2%num3))%num3 );
+
+        sc.close();
     }
 }
