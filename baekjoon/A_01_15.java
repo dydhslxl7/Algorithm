@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 import java.io.IOException;
 
-public class Main {
+public class A_01_15 {
     public static void last_for(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -60,26 +60,4 @@ public class Main {
         bw.close();
     }
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        
-        ArrayList<Integer> al = new ArrayList<Integer>();
-        String s;
-        int i;
-        // while(br.readLine() != null)
-        // {
-        //     String[] st = br.readLine().split(" ");
-        //     i = Integer.parseInt(st[0])+Integer.parseInt(st[1]);
-        //     if(i != 0) al.add(i);
-        // }
-        
-        // for (int j : al) {
-        //     bw.write(j+" ");
-        // }
-
-        br.close();
-        bw.flush();
-        bw.close();
-    }
 }
