@@ -6,27 +6,20 @@ public class A_01_17 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        StringBuilder sb;
         int n = sc.nextInt();
-        int result = 0;
         int n1, n2, n3, count = 0;
-        int temp = n;
+        int result = n;
         
-        while(n != result) {
-            if(count == 0 && temp < 10) {
-                temp *= 2;
-            }
+        while(true) {
             
-            n1 = temp / 10;
-            n2 = temp % 10;
+            n1 = result / 10;
+            n2 = result % 10;
             n3 = (n1+n2) % 10;
             
-            sb = new StringBuilder();
-            sb.append(n2);
-            sb.append(n3);
-            temp = result = Integer.parseInt(sb.toString());
-
+            result = n2*10 + n3;
             count++;
+
+            if(result == n) break;
         }
         System.out.println(count);
     }
