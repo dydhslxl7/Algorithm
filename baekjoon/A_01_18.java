@@ -3,7 +3,7 @@ package baekjoon;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Main {
+public class A_01_18 {
     public static void way1(String[] args) {
         Scanner sc = new Scanner(System.in);
 
