@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class A_01_18 {
-    // ing
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
@@ -22,6 +21,6 @@ public class A_01_18 {
         }
 
         Arrays.sort(num);
-        System.out.println(num[0]+" "+num[4]);
+        System.out.println(num[0]+" "+num[n-1]);
     }
 }
