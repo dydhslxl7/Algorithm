@@ -6,24 +6,23 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-// 풀고있음 - error 발생
+// ctrl + z -> 엔터
 public class A_01_16 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
+    public static void main(String args[]) throws IOException {
         
-        String s, str = "";
-        while((s = br.readLine()) != null) {
-
-            st = new StringTokenizer(s, " ");
-            int n1 = Integer.parseInt(st.nextToken());
-            int n2 = Integer.parseInt(st.nextToken());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st;
+        String str;
+    
+        while( (str=br.readLine()) != null ){
             
-            str += (n1+n2)+"\n";
+            st = new StringTokenizer(str," ");
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            sb.append(a+b).append("\n");
+        
         }
-
-        System.out.println(str);
-
-        br.close();
+        System.out.print(sb);
     }
 }
