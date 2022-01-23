@@ -22,5 +22,7 @@ public class A_01_17 {
             if(result == n) break;
         }
         System.out.println(count);
+
+        sc.close();
     }
 }
