@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class Main {
+public class A_01_26 {
     //1157
     // public static void main(String[] args) {
     //     Scanner in = new Scanner(System.in);
