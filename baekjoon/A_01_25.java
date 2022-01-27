@@ -25,5 +25,6 @@ public class A_01_25 {
         }
 
         System.out.println(new String(sb));
+        in.close();
     }
 }

@@ -1,7 +1,7 @@
 package baekjoon;
 
 import java.util.Arrays;
-import java.util.HashMap;
+// import java.util.HashMap;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -35,8 +35,6 @@ public class A_01_26 {
         String str = in.nextLine();
 
         StringTokenizer st = new StringTokenizer(str);
-        
-        int count = 0;
 
         System.out.println(st.countTokens());
         
@@ -61,5 +59,7 @@ public class A_01_26 {
         Arrays.sort(num);
 
         System.out.println(num[n2-1]);
+
+        in.close();
     }
 }
