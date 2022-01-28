@@ -34,13 +34,13 @@ public class A_01_22 {
         }
     }
 
-    // ing - 4344번
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
-        int n = br.read();
+        int n = Integer.parseInt(br.readLine());
 
+        double[] persent = new double[n];
         int n2 = 0;
         for (int i=0; i<n; i++) {
             st = new StringTokenizer(br.readLine());
@@ -58,14 +58,18 @@ public class A_01_22 {
             double averge = total/n2;
             Arrays.sort(num);
 
-            double persent = 0;
+            double count = 0;
             for (int j = 0; j < num.length; j++) {
                 if(num[j] > averge) {
-                    persent = (n2-j-1)/n2;
+                    count = n2-j;
+                    persent[i] = count/n2*100;
                     break;
                 }
             }
-            System.out.println(String.format("%.3d", persent));   
+        }
+
+        for (double d : persent) {
+            System.out.printf("%.3f%%\n", d);
         }
     }
 }
