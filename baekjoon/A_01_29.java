@@ -1,8 +1,9 @@
 package baekjoon;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class A_01_30 {
+public class A_01_29 {
     //5622
     public static void dial(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -52,6 +53,8 @@ public class A_01_30 {
         }
 
         System.out.println(str.length());
+
+        in.close();
     }
 
     //1316 ing
@@ -60,10 +63,29 @@ public class A_01_30 {
 
         int n = Integer.parseInt(in.nextLine());
 
+        int count = 0;
         String str;
         for (int i = 0; i < n; i++) {
             str = in.nextLine();
 
+            count++;
+            char c;
+            ArrayList<Character> ch = new ArrayList<Character>();
+            for (int j = 0; j < str.length(); j++) {
+                c = str.charAt(j);
+
+                if(j != 0 && ch.contains(c)) {
+                    if(c != str.charAt(j-1)) {
+                        count--;
+                        break;
+                    }
+                } else {
+                    ch.add(c);
+                }
+            }
         }
+
+        System.out.println(count);
+        in.close();
     }
 }
