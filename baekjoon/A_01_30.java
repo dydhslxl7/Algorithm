@@ -2,7 +2,7 @@ package baekjoon;
 
 import java.util.Scanner;
 
-public class Main {
+public class A_01_30 {
     //5622
     public static void dial(String[] args) {
         Scanner in = new Scanner(System.in);
