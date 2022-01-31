@@ -1,34 +1,35 @@
 package baekjoon;
 
 import java.util.Arrays;
-// import java.util.HashMap;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class A_01_26 {
     //1157
-    // public static void main(String[] args) {
-    //     Scanner in = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
 
-    //     String str = in.nextLine().toLowerCase();
+        int[] num = new int[26];
 
-    //     char temp;
-    //     int n;
-    //     HashMap<Character, Integer> hm = new HashMap<>();
-    //     for (int i = 0; i < str.length(); i++) {
-    //         temp = str.charAt(i);
-    //         if(hm.containsKey(temp)) {
-    //             n = hm.get(temp);
-    //             hm.put(temp, n);
-    //         } else {
-    //             hm.put(temp, 1);
-    //         }
-    //     }
-        
-    //     for(int i=0; i<hm.size(); i++) {
+        String str = in.nextLine().toUpperCase();
 
-    //     }
-    // }
+        char temp = '?';
+        int max = -1;
+        for (int i = 0; i < str.length(); i++) {
+            num[str.charAt(i)-65]++;
+
+            if(max < num[str.charAt(i)-65]) {
+                max = num[str.charAt(i)-65];
+                temp = str.charAt(i);
+            }
+            else if (max == num[str.charAt(i)-65]) {
+                temp = '?';
+            }
+        }
+
+        System.out.println(temp);
+        in.close();
+    }
 
     public static void Q_1152(String[] args) {
         Scanner in = new Scanner(System.in);
