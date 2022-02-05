@@ -23,4 +23,12 @@ public class A_02_04 {
 
         in.close();
     }
+
+    //10171
+    public static void main(String[] args) {
+        System.out.parseInt("\\    /\\");
+        System.out.parseInt("  )  ( ')");
+        System.out.parseInt(" (  /  )" );
+        System.out.parseInt(" \\(__)|");
+    }
 }
