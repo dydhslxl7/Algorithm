@@ -4,8 +4,8 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class A_02_04 {
-    //2750
-    public static void main(String[] args) {
+    //2750 ing
+    public static void sort(String[] args) {
         Scanner in = new Scanner(System.in);
 
         int n = Integer.parseInt(in.nextLine());
@@ -15,9 +15,9 @@ public class A_02_04 {
             num[i] = Integer.parseInt(in.nextLine());
         }
 
-        Arrays.asort(num);
+        Arrays.asList(num);
 
-        foreach(int n1 : num) {
+        for (int n1 : num) {
             System.out.println(n1);
         }
 
@@ -25,10 +25,11 @@ public class A_02_04 {
     }
 
     //10171
-    public static void main(String[] args) {
-        System.out.parseInt("\\    /\\");
-        System.out.parseInt("  )  ( ')");
-        System.out.parseInt(" (  /  )" );
-        System.out.parseInt(" \\(__)|");
+    public static void cat(String[] args) {
+        System.out.println("\\    /\\");
+		System.out.println(" )  ( ')");
+		System.out.println("(  /  )");
+		System.out.println(" \\(__)|");  
     }
+
 }
