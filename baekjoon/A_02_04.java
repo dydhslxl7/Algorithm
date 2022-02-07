@@ -32,4 +32,13 @@ public class A_02_04 {
 		System.out.println(" \\(__)|");  
     }
 
+    //10172
+    public static void dog(String[] args) {
+        System.out.println("|\\_/|");
+		System.out.println("|q p|   /}");
+		System.out.println("( 0 )\"\"\"\\");
+		System.out.println("|\"^\"`    |");
+		System.out.println("||_/=\\\\__|");
+    }
+
 }
