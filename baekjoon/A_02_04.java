@@ -1,26 +1,31 @@
 package baekjoon;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class A_02_04 {
-    //2750 ing
+    //2750
     public static void sort(String[] args) {
         Scanner in = new Scanner(System.in);
 
         int n = Integer.parseInt(in.nextLine());
 
+        int temp;
         int[] num = new int[n];
         for(int i=0; i<n; i++) {
             num[i] = Integer.parseInt(in.nextLine());
+
+            for(int j=i; j>0; j--) {
+                if(num[j] < num[j-1]) {
+                    temp = num[j-1];
+                    num[j-1] = num[j];
+                    num[j] = temp;
+                }
+            }
         }
 
-        Arrays.asList(num);
-
-        for (int n1 : num) {
-            System.out.println(n1);
+        for (int i : num) {
+            System.out.println(i);
         }
-
         in.close();
     }
 
