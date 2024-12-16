@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+-- 테이블 : FIRST_HALF (아이스크림 가게의 상반기 주문 정보) / ICECREAM_INFO (아이스크림 성분에 대한 정보)
+SELECT F.FLAVOR
+FROM FIRST_HALF F LEFT JOIN ICECREAM_INFO I ON F.FLAVOR = I.FLAVOR
+WHERE 
+    F.TOTAL_ORDER > 3000
+    AND I.INGREDIENT_TYPE = 'fruit_based'
+ORDER BY TOTAL_ORDER DESC;
