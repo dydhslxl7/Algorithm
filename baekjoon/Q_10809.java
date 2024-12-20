@@ -1,3 +1,5 @@
+package baekjoon;
+
 import java.io.*;
 
 public class Q_10809 {
