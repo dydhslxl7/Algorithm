@@ -27,3 +27,30 @@ def solution(a, d, included):
     for index, flag in enumerate(included):
         if flag: answer += a + (d * index)
     return answer
+
+# 코드 처리하기 => 홀짝에 따라 다른 값 반환하기 -> 삼항 연산자 : 조건에 따라 값을 선택하는 간단한 방법
+def solution(code):
+    mode = 0
+    answer = ""
+    for i in range(0, len(code)): # range, len 함수 사용법 확인
+        if code[i] == "1":
+            mode = 1 if mode == 0 else 0 # 삼항 연산자 사용
+            continue
+        if mode == 0 and i % 2 == 0: answer += code[i]
+        elif mode == 1 and i % 2 != 0: answer += code[i]
+    
+    if answer == '': answer = "EMPTY"
+    return answer
+
+def solution(code):
+    answer = ''
+
+    mode = 0
+    for i in range(len(code)):
+        if code[i] == '1':
+            mode ^= 1 # XOR 연산자 사용
+        else:
+            if i % 2 == mode: # mode 홀짝에 따라 인덱스 선택
+                answer += code[i]
+
+    return answer if answer else 'EMPTY'
