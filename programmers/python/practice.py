@@ -54,3 +54,10 @@ def solution(code):
                 answer += code[i]
 
     return answer if answer else 'EMPTY'
+
+# 주사위 게임2 => 세 수의 연산 -> set : 중복된 값을 제거하고 고유한 값만을 저장하는 자료형
+def solution(a, b, c):
+    answer = a+b+c
+    if len({a, b, c}) <= 2: answer *= a**2 + b**2 + c**2 # pow(a, 2) 대신 a**2 사용
+    if len({a, b, c}) == 1: answer *= a**3 + b**3 + c**3 # pow(a, 3) 대신 a**3 사용
+    return answer
