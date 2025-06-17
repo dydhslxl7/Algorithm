@@ -61,3 +61,23 @@ def solution(a, b, c):
     if len({a, b, c}) <= 2: answer *= a**2 + b**2 + c**2 # pow(a, 2) 대신 a**2 사용
     if len({a, b, c}) == 1: answer *= a**3 + b**3 + c**3 # pow(a, 3) 대신 a**3 사용
     return answer
+
+# 원소들의 곱과 합 => !! eval과 sum 사용법 확인 !!
+def solution(num_list):
+    ans1 = 1
+    ans2 = 0
+    for i in num_list:
+        ans1 *= i
+        ans2 += i
+    return 1 if ans1 < ans2**2 else 0
+
+def solution(num_list):
+    ans = 1
+    for i in num_list:
+        ans *= i
+    return 1 if ans < sum(num_list)**2 else 0
+
+def solution(num_list):
+    s = sum(num_list)**2
+    p = eval('*'.join([str(n) for n in num_list])) # eval과 join, str 사용법 숙지!!
+    return 1 if s > p else 0
