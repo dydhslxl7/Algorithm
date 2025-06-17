@@ -81,3 +81,12 @@ def solution(num_list):
     s = sum(num_list)**2
     p = eval('*'.join([str(n) for n in num_list])) # eval과 join, str 사용법 숙지!!
     return 1 if s > p else 0
+
+# 이어 붙인 수
+def solution(num_list):
+    n1 = ""
+    n2 = ""
+    for i in num_list:
+        if i % 2 == 0: n1 += str(i)
+        else: n2 += str(i)
+    return int(n1) + int(n2)
