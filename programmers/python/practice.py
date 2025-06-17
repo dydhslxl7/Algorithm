@@ -103,3 +103,19 @@ def solution(num_list):
 def solution(num_list):
     num_list.append(num_list[-1]-num_list[-2] if num_list[-1]>num_list[-2] else num_list[-1]*2)
     return num_list
+
+# 수 조작하기
+def solution(n, control):
+    for i in control:
+        if i == "w": n += 1
+        elif i == "s": n -= 1
+        elif i == "d": n += 10
+        else: n -= 10
+    return n
+
+def solution(n, control):
+    answer = n
+    c = {'w':1, 's':-1, 'd':10, 'a':-10} # 딕셔너리 사용법 숙지
+    for i in control:
+        answer += c[i] # 딕셔너리에서 키를 통해 값에 접근
+    return answer
