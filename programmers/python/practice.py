@@ -119,3 +119,11 @@ def solution(n, control):
     for i in control:
         answer += c[i] # 딕셔너리에서 키를 통해 값에 접근
     return answer
+
+# 수 조작하기 2 -> 딕셔너리 사용법 숙지
+def solution(numLog):
+    answer = ''
+    key = {1:"w", -1:"s", 10:"d", -10:"a"}
+    for i in range(1, len(numLog)):
+        answer += key[(numLog[i] - numLog[i-1])]
+    return answer
