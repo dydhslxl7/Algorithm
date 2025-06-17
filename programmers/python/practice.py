@@ -90,3 +90,16 @@ def solution(num_list):
         if i % 2 == 0: n1 += str(i)
         else: n2 += str(i)
     return int(n1) + int(n2)
+
+# 마지막 두 원소 -> 배열의 -1, -2 인덱스 사용법 숙지
+def solution(num_list):
+    n = len(num_list)
+    if num_list[n-2] < num_list[n-1]:
+        num_list.append(num_list[n-1] - num_list[n-2])
+    else:
+        num_list.append(num_list[n-1]*2)
+    return num_list
+
+def solution(num_list):
+    num_list.append(num_list[-1]-num_list[-2] if num_list[-1]>num_list[-2] else num_list[-1]*2)
+    return num_list
