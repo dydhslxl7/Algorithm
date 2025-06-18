@@ -17,3 +17,18 @@ def solution(arr, queries):
                 tmp.append(x)
         answer.append(-1 if not tmp else min(tmp))
     return answer
+
+# 수열과 구간 쿼리 3
+def solution(arr, queries):
+    answer = []
+    temp = 0
+    for i, j in queries:
+        temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+    return arr
+
+def solution(arr, queries):
+    for a,b in queries:
+        arr[a],arr[b]=arr[b],arr[a] # 변수 언패킹 사용법 숙지
+    return arr
