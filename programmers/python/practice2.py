@@ -44,3 +44,12 @@ def solution(x1, x2, x3, x4):
 def solution(my_string, index_list):
     answer = ''.join(my_string[i] for i in index_list)
     return answer
+
+# 문자열 여러번 뒤집기
+def solution(my_string, queries):
+    answer = ''
+    my_string = list(my_string)
+    for i, j in queries:
+        # my_string[i:j+1] = reversed(my_string[i:j+1])
+        my_string[i:j+1] = my_string[i:j+1][::-1]  # 문자열 슬라이싱과 역순
+    return ''.join(my_string)
