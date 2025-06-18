@@ -39,3 +39,8 @@ def solution(x1, x2, x3, x4):
 
 def solution(x1, x2, x3, x4):
     return ((x1 | x2) & (x3 | x4)) # 비트 연산자
+
+# 글자 이어 붙여 문자열 만들기 -> join과 문자열 인덱싱
+def solution(my_string, index_list):
+    answer = ''.join(my_string[i] for i in index_list)
+    return answer
