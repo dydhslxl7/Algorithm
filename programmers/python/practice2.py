@@ -53,3 +53,18 @@ def solution(my_string, queries):
         # my_string[i:j+1] = reversed(my_string[i:j+1])
         my_string[i:j+1] = my_string[i:j+1][::-1]  # 문자열 슬라이싱과 역순
     return ''.join(my_string)
+
+# 접미사 배열
+"""
+* sorted()와 sort()의 차이점에 대해 알아보자!
+sorted()는 원본 리스트를 건드리지 않고 정렬된 새 리스트를 반환
+sort()는 원본 리스트를 직접 정렬해서 None을 반환해
+둘 다 파이썬에서 엄청 최적화된 정렬 알고리즘(Timsort)을 사용해서 시간 복잡도는 O(n log n)으로 거의 비슷해. 그러니까 성능 걱정은 안 해도 돼! 
+결론적으로, 원본을 바꾸고 싶으면 sort()를 쓰고, 원본은 그대로 두고 정렬된 새 버전을 얻고 싶으면 sorted()를 쓰면 돼! 상황에 맞게 잘 골라 쓰면 된다!
+"""
+def solution(my_string):
+    answer = []
+    for i in range(0, len(my_string)):
+        answer.append(my_string[i:])
+    answer.sort()
+    return answer
