@@ -68,3 +68,11 @@ def solution(my_string):
         answer.append(my_string[i:])
     answer.sort()
     return answer
+
+# 접미사인지 확인하기 -> -len()
+def solution(my_string, is_suffix):
+    answer = 0
+    if my_string[-len(is_suffix):] == is_suffix:
+        answer = 1
+    return answer
+
