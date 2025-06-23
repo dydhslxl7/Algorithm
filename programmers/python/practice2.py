@@ -76,3 +76,22 @@ def solution(my_string, is_suffix):
         answer = 1
     return answer
 
+# 배열 만들기 2
+def solution(l, r):
+    answer = []
+    cnt = 1
+    while True:
+        n = int(bin(cnt).replace('0b', '')) * 5 # 2진수로 변환 후 '0b' 제거하고 5를 곱함
+        cnt += 1
+        if l <= n <= r:
+            answer.append(n)
+        elif n > r:
+            break
+    return answer if len(answer) != 0 else [-1]
+
+def solution(l, r):
+    answer = []
+    for num in range(l, r + 1):
+        if not set(str(num)) - set(['0', '5']): # set을 사용하여 숫자에 '0'과 '5'만 있는지 확인
+            answer.append(num)
+    return answer if answer else [-1]
