@@ -99,3 +99,7 @@ def solution(l, r):
 # 접두사인지 확인하기 -> startswith()
 def solution(my_string, is_prefix):
     return 1 if my_string.startswith(is_prefix) else 0
+
+# 문자열 뒤집기 -> [::-1]
+def solution(my_string, s, e):
+    return my_string[:s]+my_string[s:e+1][::-1]+my_string[e+1:]
