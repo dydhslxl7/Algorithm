@@ -103,3 +103,14 @@ def solution(my_string, is_prefix):
 # 문자열 뒤집기 -> [::-1]
 def solution(my_string, s, e):
     return my_string[:s]+my_string[s:e+1][::-1]+my_string[e+1:]
+
+# 세로 읽기 -> [c-1::m]
+def solution(my_string, m, c):
+    answer = ''
+    while my_string != '':
+        answer += my_string[0:m][c-1]
+        my_string = my_string[m:]  # 슬라이싱과 문자열 인덱싱
+    return answer
+
+def solution(my_string, m, c):
+    return my_string[c-1::m]
