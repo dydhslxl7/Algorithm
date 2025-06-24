@@ -26,7 +26,7 @@ def solution(a, b, c, d):
     return answer
 
 """
-* list.count() / list.inset()의 활용
+* list.count() / list.index()의 활용
 """
 def solution(a, b, c, d):
     l = [a,b,c,d]
