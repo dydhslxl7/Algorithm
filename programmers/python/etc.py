@@ -36,3 +36,31 @@ def solution(intStrs, k, s, l):
         if n > k:
             answer.append(n)
     return answer
+
+# 배열 만들기 4
+def solution(arr):
+    stk = [arr[0]]
+    n = 1 
+    while n < len(arr):
+        if len(stk) == 0 or arr[n] > stk[-1]:
+            stk.append(arr[n])
+            n += 1
+        else:
+            stk.pop()
+    return stk
+
+# 부분 문자열 이어 붙여 문자열 만들기
+def solution(my_strings, parts):
+    answer = ''
+    for i, str in enumerate(my_strings):
+        answer += str[parts[i][0] : parts[i][1]+1]
+    return answer
+
+# 문자열의 뒤의 n글자
+def solution(my_string, n):
+    answer = my_string[-n:]
+    return answer
+
+# 문자열의 앞의 n글자
+def solution(my_string, n):
+    return my_string[:n]
