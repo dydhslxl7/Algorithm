@@ -95,3 +95,7 @@ def solution(l, r):
         if not set(str(num)) - set(['0', '5']): # set을 사용하여 숫자에 '0'과 '5'만 있는지 확인
             answer.append(num)
     return answer if answer else [-1]
+
+# 접두사인지 확인하기 -> startswith()
+def solution(my_string, is_prefix):
+    return 1 if my_string.startswith(is_prefix) else 0
