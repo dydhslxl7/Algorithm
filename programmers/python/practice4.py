@@ -29,3 +29,15 @@ def solution(arr, idx):
 
 def solution(arr, idx):
     return arr.index(1, idx)
+
+## unpacking
+# 리스트 자르기 -> 풀이 2
+def solution(n, slicer, num_list):
+    a, b, c = slicer
+    return [num_list[:b+1], num_list[a:], num_list[a:b+1], num_list[a:b+1:c]][n-1]
+
+# 배열 만들기 3
+def solution(arr, intervals):
+    a1, b1 = intervals[0]
+    a2, b2 = intervals[1]
+    return arr[a1:b1+1]+arr[a2:b2+1]
