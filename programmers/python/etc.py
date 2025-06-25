@@ -88,3 +88,30 @@ def solution(my_string):
 # 카운트 다운
 def solution(start_num, end_num):
     return [i for i in range(start_num, end_num-1, -1)]
+
+# 리스트 자르기 -> 풀이 1
+def solution(n, slicer, num_list):
+    answer = []
+    if n == 1:
+        answer = num_list[:slicer[1]+1]
+    elif n == 2:
+        answer = num_list[slicer[0]:]
+    elif n == 3:
+        answer = num_list[slicer[0]:slicer[1]+1]
+    else:
+        answer = num_list[slicer[0]:slicer[1]+1:slicer[2]]
+    return answer
+
+# 첫 번째로 나오는 음수 -> for문 돌리는 방법이 더 간단하고 불필요한 리스트 생성 안해도 됨
+def solution(num_list):
+    answer = [i for i in range(len(num_list)) if num_list[i] < 0]
+    return answer[0] if len(answer) else -1
+
+# 배열 조각하기
+def solution(arr, query):
+    for k, q in enumerate(query):
+        if k % 2 == 0:
+            arr = arr[:q + 1]
+        else:
+            arr = arr[q:]
+    return arr
