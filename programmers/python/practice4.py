@@ -41,3 +41,13 @@ def solution(arr, intervals):
     a1, b1 = intervals[0]
     a2, b2 = intervals[1]
     return arr[a1:b1+1]+arr[a2:b2+1]
+
+# 2의 영역 -> 역순으로 index를 찾는 방법
+def solution(arr):
+    tmp = [i for i in range(len(arr)) if arr[i] == 2]
+    return arr[min(tmp):max(tmp)+1] if len(tmp) > 0 else -1
+
+def solution(arr):
+    if 2 not in arr:
+        return [-1]
+    return arr[arr.index(2):len(arr)-arr[::-1].index(2)+1]
