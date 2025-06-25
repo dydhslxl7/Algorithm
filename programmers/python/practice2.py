@@ -118,3 +118,13 @@ def solution(my_string, m, c):
 # qr code -> 풀이 2
 def solution(q, r, code):
     return code[r::q]
+
+# 문자 개수 세기 -> 풀이 2
+def solution(my_string):
+    answer=[0]*52
+    for x in my_string:
+        if x.isupper():
+            answer[ord(x)-65]+=1
+        else:
+            answer[ord(x)-71]+=1
+    return answer

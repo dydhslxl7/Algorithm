@@ -72,3 +72,15 @@ def solution(q, r, code):
         if k % q == r:
             answer += v
     return answer
+
+# 문자 개수 세기 -> 풀이 1
+def solution(my_string):
+    answer = []
+    ascii = 65
+    while ascii < 123:
+        answer.append(my_string.count(chr(ascii)))
+        if ascii == 90:
+            ascii += 7
+        else: 
+            ascii += 1
+    return answer
