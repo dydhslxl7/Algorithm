@@ -17,3 +17,15 @@ def solution(my_string, indices):
     for i in sorted(indices, reverse=True):
         del my_string[i] 
     return ''.join(my_string)
+
+# 가까운 1 찾기
+'''
+1. if else 문 먼저 작성 후 for 문을 사용하여 리스트 생성
+2. index 메서드에 시작 인덱스를 지정하는 방법
+'''
+def solution(arr, idx):
+    arr = [0 if arr[i] == 1 and i < idx else arr[i] for i in range(len(arr))]
+    return arr.index(1) if 1 in arr else -1
+
+def solution(arr, idx):
+    return arr.index(1, idx)
