@@ -84,3 +84,7 @@ def solution(my_string):
         else: 
             ascii += 1
     return answer
+
+# 카운트 다운
+def solution(start_num, end_num):
+    return [i for i in range(start_num, end_num-1, -1)]
