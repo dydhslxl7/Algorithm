@@ -64,3 +64,11 @@ def solution(my_string, n):
 # 문자열의 앞의 n글자
 def solution(my_string, n):
     return my_string[:n]
+
+# qr code -> 풀이 1
+def solution(q, r, code):
+    answer = ''
+    for k, v in enumerate(code):
+        if k % q == r:
+            answer += v
+    return answer

@@ -114,3 +114,7 @@ def solution(my_string, m, c):
 
 def solution(my_string, m, c):
     return my_string[c-1::m]
+
+# qr code -> 풀이 2
+def solution(q, r, code):
+    return code[r::q]
