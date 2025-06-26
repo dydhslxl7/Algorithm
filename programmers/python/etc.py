@@ -115,3 +115,58 @@ def solution(arr, query):
         else:
             arr = arr[q:]
     return arr
+
+# n 번째 원소부터
+def solution(num_list, n):
+    return num_list[n-1:]
+
+# 순서 바꾸기
+def solution(num_list, n):
+    return num_list[n:]+num_list[:n]
+
+# n 번째 원소까지
+def solution(num_list, n):
+    return num_list[:n]
+
+# n개 간격의 원소들
+def solution(num_list, n):
+    answer = []
+    return num_list[::n]
+
+# 홀짝에 따라 다른 합 구하기
+def solution(num_list):
+    return max(sum(num_list[0::2]), sum(num_list[1::2]))
+
+# 5개씩
+def solution(names):
+    return names[::5]
+
+# 할 일 목록
+def solution(todo_list, finished):
+    return [todo_list[k] for k, v in enumerate(todo_list) if not finished[k]]
+
+# n보다 커질 때까지 더하기
+def solution(numbers, n):
+    answer = 0
+    for i in numbers:
+        answer += i
+        if answer > n:
+            break
+    return answer
+
+# 수열과 구간 쿼리 1
+def solution(arr, queries):
+    for s, e in queries:
+        for k, v in enumerate(arr):
+            if s <= k and k <= e:
+                arr[k] += 1
+    return arr
+
+# 왼쪽 오른쪽
+def solution(str_list):
+    for i in range(len(str_list)):
+        if str_list[i] == 'l':
+            return str_list[:i]
+        elif str_list[i] == 'r':
+            return str_list[i+1:]
+    return []
