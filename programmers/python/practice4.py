@@ -74,3 +74,16 @@ def solution(arr):
         answer += 1
 
     return answer
+
+# 길이에 따른 연산
+'''
+1. math.prod(): 일반적인 반복 가능한(iterable) 객체의 곱셈
+math 모듈에 있는 prod 함수는 리스트, 튜플 등 일반적인 반복 가능한 객체(iterable) 안에 있는 숫자들을 전부 곱해줘.
+
+사용법: math.prod(iterable, *, start=1)
+iterable: 곱셈을 할 숫자 요소들이 들어있는 리스트, 튜플 등.
+start: 곱셈을 시작할 초기값. 기본값은 1이야. (만약 0으로 설정하면 결과는 항상 0이 되겠지?)
+'''
+from math import prod
+def solution(num_list):
+    return sum(num_list) if len(num_list)>=11 else prod(num_list)
