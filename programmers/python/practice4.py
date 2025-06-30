@@ -104,3 +104,7 @@ def solution(myString, pat):
 # 배열에서 문자열 대소문자 변환하기 -> replace
 def solution(myString):
     return myString.lower().replace('a', 'A')
+
+# 공백으로 구분하기1 -> split()은 리스트로 반환
+def solution(my_string):
+    return my_string.split(' ')
