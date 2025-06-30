@@ -170,3 +170,84 @@ def solution(str_list):
         elif str_list[i] == 'r':
             return str_list[i+1:]
     return []
+
+# 조건에 맞게 수열 변환하기 1
+def solution(arr):
+    for k, v in enumerate(arr):
+        if v >= 50 and v % 2 == 0:
+            arr[k] = v // 2
+        elif v < 50 and v % 2 != 0:
+            arr[k] = v * 2
+    return arr
+
+# 1로 만들기
+def solution(num_list):
+    answer = 0
+    for i in num_list:
+        while i > 1:
+            if i % 2 == 0:
+                i //= 2
+            else:
+                i = (i - 1) // 2
+            answer += 1
+    return answer
+
+# 길이에 따른 연산
+def solution(num_list):
+    if len(num_list) >= 11:
+        return eval('+'.join(str(i) for i in num_list))
+    else:
+        return eval('*'.join(str(i) for i in num_list))
+
+# 대문자로 바꾸기    
+def solution(myString):
+    return myString.upper()
+
+# 소문자로 바꾸기
+def solution(myString):
+    return myString.lower()
+
+# 배열에서 문자열 대소문자 변환하기
+def solution(myString):
+    myString = myString.lower()
+    flag = myString.find('a')
+    while flag > -1:
+        myString = myString[:flag] + 'A' + myString[flag+1:]
+        flag = myString.find('a', flag+1)
+    return myString
+
+# 특정한 문자를 대문자로 바꾸기
+def solution(my_string, alp):
+    return my_string.replace(alp, alp.upper())
+
+# 특정 문자열로 끝나는 가장 긴 부분 문자열 찾기
+def solution(myString, pat):
+    flag = myString.rfind(pat)
+    return myString[:flag+len(pat)]
+
+# ad 제거하기
+def solution(myString, pat):
+    cnt = 0
+    flag = myString.find(pat)
+    while flag > -1:
+        myString[flag:len(pat)]
+        cnt += 1
+        flag = myString.find(pat, flag+1)
+    return cnt
+
+# 공백으로 구분하기2 -> 빈 배열 제거
+def solution(my_string):
+    return [i for i in my_string.split(' ') if i != '']
+
+# 배열에서 문자열 대소문자 변환하기
+def solution(strArr):
+    for k, v in enumerate(strArr):
+        if k % 2 != 0:
+            strArr[k] = v.upper()
+        else:
+            strArr[k] = v.lower()
+    return strArr
+
+# ad 제거하기
+def solution(strArr):
+    return [v for v in strArr if 'ad' not in v]
