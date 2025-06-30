@@ -100,3 +100,7 @@ def solution(myString, pat):
 
 def solution(myString, pat):
     return int(pat.lower() in myString.lower())
+
+# 배열에서 문자열 대소문자 변환하기 -> replace
+def solution(myString):
+    return myString.lower().replace('a', 'A')
