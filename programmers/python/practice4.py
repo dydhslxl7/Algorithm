@@ -87,3 +87,16 @@ start: 곱셈을 시작할 초기값. 기본값은 1이야. (만약 0으로 설�
 from math import prod
 def solution(num_list):
     return sum(num_list) if len(num_list)>=11 else prod(num_list)
+
+# 원하는 문자열 찾기 -> find와 in을 활용한 문자열 검색
+def solution(myString, pat):
+    myString = myString.upper()
+    pat = pat.upper()
+    
+    if myString.find(pat) > -1:
+        return 1
+    else:
+        return 0
+
+def solution(myString, pat):
+    return int(pat.lower() in myString.lower())
