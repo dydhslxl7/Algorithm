@@ -120,3 +120,42 @@ def solution(myString, pat):
     new_text = myString.translate(translation_table)
 
     return 1 if pat in new_text else 0
+
+# 빈 배열에 추가, 삭제하기
+def solution(arr, flag):
+    answer = []
+    for k, v in enumerate(arr):
+        if flag[k]:
+            for i in range(v * 2):
+                answer.append(v)
+        else:
+            for i in range(v):
+                answer.pop()
+    return answer
+
+'''
+zip()의 특징 및 활용
+튜플 형태로 묶어줌: zip()은 각 요소들을 튜플 형태로 묶어서 반환해.
+
+가장 짧은 이터러블에 맞춰 작동: 만약 입력받은 이터러블들의 길이가 다르면, zip()은 가장 짧은 이터러블의 길이에 맞춰서 요소를 묶어. 나머지 긴 이터러블의 남은 요소들은 무시돼.
+
+names = ["철수", "영희", "민수"]
+scores = [90, 85] # 영희의 점수가 빠졌네!
+
+zipped_students = list(zip(names, scores))
+print(f"길이가 다른 리스트 묶기: {zipped_students}")
+# 결과: 길이가 다른 리스트 묶기: [('철수', 90), ('영희', 85)]
+# 민수는 scores에 짝이 없어서 묶이지 않아.
+'''
+'''
+파이썬에서 리스트 * 숫자의 의미
+파이썬에서 리스트에 정수를 곱하면, 그 리스트의 내용이 곱한 횟수만큼 반복되어 새로운 리스트를 만들어.
+'''
+def solution(arr, flag):
+    arr1 = []
+    for i, j in zip(arr, flag):
+        if j:
+            arr1 += [i] * i * 2
+        else:
+            arr1 = arr1[:-i]
+    return arr1
