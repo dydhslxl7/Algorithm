@@ -251,3 +251,52 @@ def solution(strArr):
 # ad 제거하기
 def solution(strArr):
     return [v for v in strArr if 'ad' not in v]
+
+# x 사이의 개수
+def solution(myString):
+    return [len(i) for i in myString.split('x')]
+
+# 문자열 잘라서 정렬하기
+def solution(myString):
+    myString = [i for i in myString.split('x') if i != '']
+    myString.sort()
+    return myString
+
+# 간단한 식 계산하기
+def solution(binomial):
+    return eval(binomial)
+
+# rny_string
+def solution(rny_string):
+    return rny_string.replace('m', 'rn')
+
+# 세 개의 구분자
+def solution(myStr):
+    newStr = [i for i in myStr.replace('a', ' ').replace('b', ' ').replace('c', ' ').split(' ') if i != '']
+    return newStr if newStr else ['EMPTY']
+
+# 배열의 원소만큼 추가하기
+def solution(arr):
+    answer = []
+    for i in arr:
+        for j in range(i):
+            answer.append(i)
+    return answer
+
+# 무작위로 K개의 수 뽑기
+def solution(arr, k):
+    answer = []
+    for i in arr:
+        if i not in answer and k > len(answer):
+            answer.append(i)
+    return answer + [-1] * (k-len(answer))
+
+# 배열 만들기 6
+def solution(arr):
+    answer = []
+    for i in range(len(arr)):
+        if answer and arr[i] == answer[-1]:
+            answer.pop()
+        else:
+            answer.append(arr[i])
+    return answer or [-1]
