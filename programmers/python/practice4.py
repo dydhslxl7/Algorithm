@@ -108,3 +108,15 @@ def solution(myString):
 # 공백으로 구분하기1 -> split()은 리스트로 반환
 def solution(my_string):
     return my_string.split(' ')
+
+# 문자열 바꿔서 찾기
+def solution(myString, pat):
+    # 'A'를 'B'로, 'B'를 'A'로 바꾸는 테이블 생성
+    # 첫 번째 인자: 바꿀 문자들 (원본)
+    # 두 번째 인자: 바뀔 문자들 (대상)
+    translation_table = str.maketrans("AB", "BA") 
+
+    # 테이블을 적용해서 문자열 치환
+    new_text = myString.translate(translation_table)
+
+    return 1 if pat in new_text else 0
