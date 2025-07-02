@@ -300,3 +300,59 @@ def solution(arr):
         else:
             answer.append(arr[i])
     return answer or [-1]
+
+# 배열의 길이를 2의 거듭제곱으로 만들기
+def solution(arr):
+    answer = []
+    n = len(arr)
+    cnt = 0
+    while(n > 1):
+        n /= 2
+        cnt += 1
+    if n > 0:
+        arr += [0] * (2 ** cnt - len(arr))
+    return arr
+
+# 배열 비교하기
+def solution(arr1, arr2):
+    a = len(arr1)
+    b = len(arr2)
+    
+    if a != b:
+        return 1 if a > b else -1
+    else:
+        if sum(arr1) == sum(arr2):
+            return 0
+        temp = max(sum(arr1), sum(arr2))
+        return 1 if temp == sum(arr1) else -1
+
+def solution(arr1, arr2):
+    return (len(arr1) > len(arr2)) - (len(arr2) > len(arr1)) or (sum(arr1) > sum(arr2)) - (sum(arr2) > sum(arr1))
+
+# 배열의 길이에 따라 다른 연산하기
+def solution(arr, n):
+    answer = []
+    start = 1 if len(arr) % 2 == 0 else 0
+    for i in range(start, len(arr), 2):
+        arr[i] += n
+    return arr
+
+# 뒤에서 5등까지
+def solution(num_list):
+    num_list.sort()
+    del num_list[5:]
+    return num_list
+
+# 문자열 묶기
+def solution(strArr):
+    answer = {}
+    for i in strArr:
+        if answer.get(len(i)):
+            answer[len(i)] += 1
+        else:
+            answer[len(i)] = 1
+    return max(answer.values())
+
+# 뒤에서 5등 위로
+def solution(num_list):
+    return sorted(num_list)[5:]
