@@ -356,3 +356,48 @@ def solution(strArr):
 # 뒤에서 5등 위로
 def solution(num_list):
     return sorted(num_list)[5:]
+
+# 전국 대회 선발 고사
+def solution(rank, attendance):
+    answer = 0
+    n = 2
+    for i in range(1, len(rank)+1):
+        k = rank.index(i)
+        if attendance[k]:
+            answer += k*(100**n)
+            n -= 1
+        if n == -1:
+            break
+    return answer
+
+# 정수 부분
+def solution(flo):
+    return int(flo)
+
+# 문자열 정수의 합
+def solution(num_str):
+    return eval('+'.join(list(num_str)))
+
+# 문자열을 정수로 변환하기
+def solution(n_str):
+    return int(n_str)
+
+# 0 떼기
+def solution(n_str):
+    return str(int(n_str))
+
+# 두 수의 합
+def solution(a, b):
+    return str(int(a)+int(b))
+
+# 문자열로 변환
+def solution(n):
+    return str(n)
+
+# 부분 문자열인지 확인하기
+def solution(my_string, target):
+    return int(target in my_string)
+
+# 배열의 원소 삭제하기
+def solution(arr, delete_list):
+    return [i for i in arr if i not in delete_list]
