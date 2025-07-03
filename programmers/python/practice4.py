@@ -159,3 +159,7 @@ def solution(arr, flag):
         else:
             arr1 = arr1[:-i]
     return arr1
+
+# 0 떼기 -> lstrip()
+def solution1(n_str):
+    return n_str.lstrip('0')
