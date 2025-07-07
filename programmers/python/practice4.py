@@ -177,3 +177,12 @@ def solution(n):
     return answer
 
 print(solution(3))
+
+# l로 만들기
+'''
+ord / chr
+'''
+def solution(myString):
+    for i in range(97, 109):
+        myString = myString.replace(chr(i), 'l')
+    return myString
