@@ -160,6 +160,33 @@ def solution(arr, flag):
             arr1 = arr1[:-i]
     return arr1
 
+# 0 떼기 -> lstrip()
+def solution1(n_str):
+    return n_str.lstrip('0')
+
+# 특별한 이차원 배열 1
+'''
+answer = [[0] * 3] * 3 -> 얕은 복사 : answer = [list_A, list_A, list_A] 여기서 list_A는 [0, 0, 0] 이라는 하나의 객체야.
+answer는 [list_A, list_B, list_C] 처럼 각기 다른 리스트 객체를 가리키게 돼서, 하나의 리스트를 변경해도 다른 리스트에는 영향을 주지 않아!
+'''
+def solution(n):
+    answer = [[0] * n for _ in range(n)]
+
+    for i in range(n):
+        answer[i][i] = 1
+    return answer
+
+print(solution(3))
+
+# l로 만들기
+'''
+ord / chr
+'''
+def solution(myString):
+    for i in range(97, 109):
+        myString = myString.replace(chr(i), 'l')
+    return myString
+
 # 날짜 비교하기
 '''
 튜플뿐만 아니라 리스트도 부등호(>, <, >=, <=) 비교가 가능합니다.

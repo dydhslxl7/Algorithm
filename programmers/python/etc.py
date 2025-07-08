@@ -356,3 +356,123 @@ def solution(strArr):
 # 뒤에서 5등 위로
 def solution(num_list):
     return sorted(num_list)[5:]
+
+# 전국 대회 선발 고사
+def solution(rank, attendance):
+    answer = 0
+    n = 2
+    for i in range(1, len(rank)+1):
+        k = rank.index(i)
+        if attendance[k]:
+            answer += k*(100**n)
+            n -= 1
+        if n == -1:
+            break
+    return answer
+
+# 정수 부분
+def solution(flo):
+    return int(flo)
+
+# 문자열 정수의 합
+def solution(num_str):
+    return eval('+'.join(list(num_str)))
+
+# 문자열을 정수로 변환하기
+def solution(n_str):
+    return int(n_str)
+
+# 0 떼기
+def solution(n_str):
+    return str(int(n_str))
+
+# 두 수의 합
+def solution(a, b):
+    return str(int(a)+int(b))
+
+# 문자열로 변환
+def solution(n):
+    return str(n)
+
+# 부분 문자열인지 확인하기
+def solution(my_string, target):
+    return int(target in my_string)
+
+# 배열의 원소 삭제하기
+def solution(arr, delete_list):
+    return [i for i in arr if i not in delete_list]
+
+# 부분 문자열
+def solution(str1, str2):
+    return 1 if str1 in str2 else 0
+
+# 꼬리 문자열
+def solution(str_list, ex):
+    answer = ''
+    for i in str_list:
+        if ex not in i:
+            answer += i
+    return answer
+
+# 정수 찾기
+def solution(num_list, n):
+    return 1 if n in num_list else 0
+
+# 주사위 게임 1
+def solution(a, b):
+    answer = 0
+    if a % 2 != 0 and b % 2 != 0:
+        answer = a ** 2 + b ** 2
+    elif a % 2 != 0 or b % 2 != 0:
+        answer = 2 * (a+b)
+    else:
+        answer = abs(a-b)
+    return answer
+
+# 조건에 맞게 수열 변환하기 3
+def solution(arr, k):
+    for i, j in enumerate(arr):
+        if k % 2 == 0:
+            arr[i] += k
+        else:
+            arr[i] *= k
+    return arr
+
+# 커피 심부름
+def solution(order):
+    answer = 0
+    for i in order:
+        if 'americano' in i or 'anything' in i: 
+            answer += 4500
+        else:
+            answer += 5000
+    return answer
+
+# 특별한 이차원 배열 2
+def solution(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            if arr[i][j] != arr[j][i]:
+                return 0
+    return 1
+
+# 정사각형으로 만들기
+def solution(arr):
+    h = len(arr)
+    w = len(arr[0])
+
+    if h > w:
+        for i in range(h):
+            arr[i] += [0] * (h-w)
+    elif h < w:
+        arr += [[0] * w] * (w-h)
+    return arr
+
+# 이차원 배열 대각선 순회하기
+def solution(board, k):
+    answer = 0
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            if i+j <= k:
+                answer += board[i][j]
+    return answer
