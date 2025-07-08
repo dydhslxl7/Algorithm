@@ -159,3 +159,11 @@ def solution(arr, flag):
         else:
             arr1 = arr1[:-i]
     return arr1
+
+# 날짜 비교하기
+'''
+튜플뿐만 아니라 리스트도 부등호(>, <, >=, <=) 비교가 가능합니다.
+파이썬에서는 리스트와 튜플 모두 내부 요소를 왼쪽부터 순서대로 차례차례 비교합니다.
+'''
+def solution(date1, date2):
+    return int(date1 < date2)
