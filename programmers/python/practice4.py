@@ -167,3 +167,15 @@ def solution(arr, flag):
 '''
 def solution(date1, date2):
     return int(date1 < date2)
+
+# 그림 확대
+'''
+파이썬에서 _ (언더스코어)는 "이 변수의 값은 딱히 중요하지 않으니 무시해라" 또는 **"이 값은 사용하지 않을 것이다"**라는 의미로 사용되는 관례적인 변수 이름이야.
+'''
+def solution(picture, k):
+    answer = []
+    for row in picture:
+        temp = ''.join([ch * k for ch in row])
+        for _ in range(k):
+            answer.append(temp)
+    return answer
