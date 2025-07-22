@@ -28,3 +28,32 @@ def solution(s):
         if i in s:
             s = s.replace(i, str(num_dic[i]))
     return int(s)
+
+# 두 정수 사이의 합
+def solution(a, b):
+    answer = 0
+    temp = 0
+    if a > b:
+        temp = a
+        a = b
+        b = temp
+    for i in range(a, b+1):
+        answer += i
+    return answer
+
+# 나누어 떨어지는 숫자 배열
+def solution(arr, divisor):
+    answer = []
+    for i in arr:
+        if i % divisor == 0:
+            answer.append(i)
+    answer.sort()
+    return answer if len(answer) > 0 else [-1]
+
+# 같은 숫자는 싫어
+def solution(arr):
+    answer = []
+    for i in arr:
+        if len(answer) == 0 or answer[-1] != i:
+            answer.append(i)
+    return answer
